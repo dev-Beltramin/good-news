@@ -1,7 +1,7 @@
+/* eslint-disable @next/next/no-img-element */
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import axios from "axios";
-import Image from "next/image";
 
 import NavBar from "@/components/navbar";
 
@@ -34,46 +34,30 @@ export default function Home() {
     <>
       <NavBar />
 
-      <main className="mt-44 max-w-screen-xl w-full mx-auto my-0">
-        <div className="flex">
+      <main>
+        {Array.isArray(items) &&
+          items.map((item) => (
+            <>
+              <div className="mt-44 max-w-screen-xl w-full mx-auto my-0 flex justify-center">
+                <div className="flex flex-col my-8 max-w-2xl">
+                  <h2 className="font-bold text-4xl w-11/12 ">{item.title}</h2>
+                  <div className="flex flex-col pt-6">
+                    <Link href={""}>{item.description}</Link>
+                  </div>
+                </div>
 
-          <div className="flex flex-col my-8">
-          <h2 className="font-bold text-4xl w-11/12">
-            Em Londrina, sobram vacinas contra gripe e dengue nos postos de
-            saúde
-          </h2>
-            <Link href={""}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui at
-              beatae, commodi explicabo repudiandae,...
-            </Link>
-            <Link href={""}>
-              {" "}
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui at
-              beatae, commodi explicabo repudiandae,...
-            </Link>
-            <Link href={""}>
-              {" "}
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui at
-              beatae, commodi explicabo repudiandae,...
-            </Link>
-          </div>
-
-          <div>
-            <Image className="absolute rounded-xl "
-              src="/jogadores.webp"
-              width={500}
-              height={500}
-              alt="Picture of the author"
-          
-            />
-            <p>Contra o correa</p>
-
-            <p className="relative">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
-              possimus voluptas reiciendis? Soluta, nesciunt accusant
-            </p>
-          </div>
-        </div>
+                <div className="relative w-96">
+                  <div className=" rounded-xl ">
+                    <img
+                      src={item.urlToImage}
+                      alt="imagem da noticia"
+                      className=" mb-6 absolute object-contain flex gap-y-10 h-full w-full"
+                    />
+                  </div>
+                </div>
+              </div>
+            </>
+          ))}
       </main>
     </>
   );

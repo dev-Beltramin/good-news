@@ -1,5 +1,15 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## iniciando o projeto 
+
+-- criar conexão com a api externa via axios 
+
+-- testar para ver se a os dados da api estão chegando corretamente 
+
+-- criar  pagina home , onde todas as noticias estarão visiveis para o usuario
+
+
+
 ## Getting Started
 
 First, run the development server:
