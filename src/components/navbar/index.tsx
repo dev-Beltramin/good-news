@@ -6,12 +6,12 @@ import Link from "next/link";
 const NavBar = () => {
   return (
     <>
-      <header className="bg-blue-300 h-20 flex w-full items-center">
+      <header className="bg-black h-20 flex w-full items-center text-white">
         <ul className="flex items-center h-full ">
           <li>
             <button className="p-4">
               <i>
-                <CiMenuBurger size={24} color="black" />
+                <CiMenuBurger size={24} color="white" />
               </i>
             </button>
           </li>

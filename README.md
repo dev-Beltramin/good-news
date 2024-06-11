@@ -8,6 +8,12 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 -- criar  pagina home , onde todas as noticias estarão visiveis para o usuario
 
+-- consumir os dados na api para exibir ao usuario
+
+-- finalizar toda a estilização da pagina home para iniciar a pagina de detalhes da noticia
+
+--
+
 
 
 ## Getting Started
